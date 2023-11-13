@@ -14,29 +14,22 @@ public class Main {
 
         paco.start();
         ramon.start();
-
-        try {
-            paco.join();
-            ramon.join();
-        } catch (InterruptedException e) {
-            System.out.println("Error");
-        }
-
-
         faustino.start();
         mrGentleman.start();
         loquendo.start();
 
+        paco.setPriority(Thread.MAX_PRIORITY);
+        ramon.setPriority(Thread.MIN_PRIORITY);
 
         try {
+            paco.join();
+            ramon.join();
             faustino.join();
             mrGentleman.join();
             loquendo.join();
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("Error");
         }
-
-
 
         System.out.println("Los Comensales han terminado de comer");
 
