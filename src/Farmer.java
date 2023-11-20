@@ -25,6 +25,9 @@ public class Farmer extends Thread {
         this.name = name;
     }
 
+
+
+
     @Override
     public void run() {
 
@@ -33,6 +36,7 @@ public class Farmer extends Thread {
                     + "!!! Vegetales totales: " + counter.getCounter());
 
         }
+
 
 
     }

@@ -14,6 +14,9 @@ public class Main {
 
         paco.start();
         ramon.start();
+        faustino.start();
+        mrGentleman.start();
+        loquendo.start();
 
         try {
             paco.join();
@@ -22,12 +25,6 @@ public class Main {
             System.out.println("Error");
         }
 
-
-        faustino.start();
-        mrGentleman.start();
-        loquendo.start();
-
-
         try {
             faustino.join();
             mrGentleman.join();
@@ -35,7 +32,6 @@ public class Main {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
 
 
         System.out.println("Los Comensales han terminado de comer");

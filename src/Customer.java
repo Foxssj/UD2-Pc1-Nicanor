@@ -4,6 +4,7 @@ public class Customer extends Thread {
     private String name;
     private int personalTime = (int) (Math.random() * (3000 - 1000 + 1));
 
+
     public Customer(Counter counter, int fullBelly, String name) {
         this.counter = counter;
         this.fullBelly = fullBelly;

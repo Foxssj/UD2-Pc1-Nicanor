@@ -1,5 +1,6 @@
 import java.util.Arrays;
 
+
 public class Counter {
     private int counter = 0;
     private final int WAREHOUSE = 20;
@@ -13,7 +14,9 @@ public class Counter {
         if (this.counter > 0) {
             counter--;
             Thread.sleep(personalTimeEating);
-        } else {
+        } else if (this.counter == 0) {
+            System.out.println("Esperando vegetales...");
+        } else  {
             wait();
         }
     }
